@@ -124,6 +124,12 @@ void            releasesleep(struct sleeplock*);
 int             holdingsleep(struct sleeplock*);
 void            initsleeplock(struct sleeplock*, char*);
 
+// peterson.c
+int peterson_create(void);
+int peterson_acquire(int, int);
+int peterson_release(int, int);
+int peterson_destroy(int);
+
 // string.c
 int             memcmp(const void*, const void*, uint);
 void*           memmove(void*, const void*, uint);
